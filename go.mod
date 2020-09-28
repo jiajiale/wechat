@@ -1,4 +1,4 @@
-module github.com/jiajiale/wechat/v1
+module github.com/jiajiale/wechat
 
 go 1.14
 
