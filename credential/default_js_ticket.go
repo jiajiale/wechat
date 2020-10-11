@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/silenceper/wechat/v2/cache"
-	"github.com/silenceper/wechat/v2/util"
+	"github.com/jiajiale/wechat/cache"
+	"github.com/jiajiale/wechat/util"
 )
 
 //获取ticket的url

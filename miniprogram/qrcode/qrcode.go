@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/silenceper/wechat/v2/miniprogram/context"
-	"github.com/silenceper/wechat/v2/util"
+	"github.com/jiajiale/wechat/miniprogram/context"
+	"github.com/jiajiale/wechat/util"
 )
 
 const (

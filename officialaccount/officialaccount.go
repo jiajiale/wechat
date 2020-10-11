@@ -3,21 +3,21 @@ package officialaccount
 import (
 	"net/http"
 
-	"github.com/silenceper/wechat/v2/officialaccount/datacube"
+	"github.com/jiajiale/wechat/officialaccount/datacube"
 
-	"github.com/silenceper/wechat/v2/credential"
-	"github.com/silenceper/wechat/v2/officialaccount/basic"
-	"github.com/silenceper/wechat/v2/officialaccount/broadcast"
-	"github.com/silenceper/wechat/v2/officialaccount/config"
-	"github.com/silenceper/wechat/v2/officialaccount/context"
-	"github.com/silenceper/wechat/v2/officialaccount/device"
-	"github.com/silenceper/wechat/v2/officialaccount/js"
-	"github.com/silenceper/wechat/v2/officialaccount/material"
-	"github.com/silenceper/wechat/v2/officialaccount/menu"
-	"github.com/silenceper/wechat/v2/officialaccount/message"
-	"github.com/silenceper/wechat/v2/officialaccount/oauth"
-	"github.com/silenceper/wechat/v2/officialaccount/server"
-	"github.com/silenceper/wechat/v2/officialaccount/user"
+	"github.com/jiajiale/wechat/credential"
+	"github.com/jiajiale/wechat/officialaccount/basic"
+	"github.com/jiajiale/wechat/officialaccount/broadcast"
+	"github.com/jiajiale/wechat/officialaccount/config"
+	"github.com/jiajiale/wechat/officialaccount/context"
+	"github.com/jiajiale/wechat/officialaccount/device"
+	"github.com/jiajiale/wechat/officialaccount/js"
+	"github.com/jiajiale/wechat/officialaccount/material"
+	"github.com/jiajiale/wechat/officialaccount/menu"
+	"github.com/jiajiale/wechat/officialaccount/message"
+	"github.com/jiajiale/wechat/officialaccount/oauth"
+	"github.com/jiajiale/wechat/officialaccount/server"
+	"github.com/jiajiale/wechat/officialaccount/user"
 )
 
 //OfficialAccount 微信公众号相关API

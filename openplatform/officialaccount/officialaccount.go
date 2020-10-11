@@ -1,12 +1,12 @@
 package officialaccount
 
 import (
-	"github.com/silenceper/wechat/v2/credential"
-	"github.com/silenceper/wechat/v2/officialaccount"
-	offConfig "github.com/silenceper/wechat/v2/officialaccount/config"
-	opContext "github.com/silenceper/wechat/v2/openplatform/context"
-	"github.com/silenceper/wechat/v2/openplatform/officialaccount/js"
-	"github.com/silenceper/wechat/v2/openplatform/officialaccount/oauth"
+	"github.com/jiajiale/wechat/credential"
+	"github.com/jiajiale/wechat/officialaccount"
+	offConfig "github.com/jiajiale/wechat/officialaccount/config"
+	opContext "github.com/jiajiale/wechat/openplatform/context"
+	"github.com/jiajiale/wechat/openplatform/officialaccount/js"
+	"github.com/jiajiale/wechat/openplatform/officialaccount/oauth"
 )
 
 //OfficialAccount 代公众号实现业务

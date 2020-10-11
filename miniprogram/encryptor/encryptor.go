@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/silenceper/wechat/v2/miniprogram/context"
+	"github.com/jiajiale/wechat/miniprogram/context"
 )
 
 //Encryptor struct

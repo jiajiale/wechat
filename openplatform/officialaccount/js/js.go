@@ -3,10 +3,10 @@ package js
 import (
 	"fmt"
 
-	"github.com/silenceper/wechat/v2/credential"
-	"github.com/silenceper/wechat/v2/officialaccount/context"
-	officialJs "github.com/silenceper/wechat/v2/officialaccount/js"
-	"github.com/silenceper/wechat/v2/util"
+	"github.com/jiajiale/wechat/credential"
+	"github.com/jiajiale/wechat/officialaccount/context"
+	officialJs "github.com/jiajiale/wechat/officialaccount/js"
+	"github.com/jiajiale/wechat/util"
 )
 
 // Js wx jssdk

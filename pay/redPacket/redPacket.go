@@ -4,8 +4,8 @@ import (
 	"encoding/xml"
 	"fmt"
 
-	"github.com/silenceper/wechat/v2/pay/config"
-	"github.com/silenceper/wechat/v2/util"
+	"github.com/jiajiale/wechat/pay/config"
+	"github.com/jiajiale/wechat/util"
 )
 
 var redPacketGateway = "https://api.mch.weixin.qq.com/mmpaymkttransfers/sendredpack"
