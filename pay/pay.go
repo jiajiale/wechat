@@ -4,6 +4,7 @@ import (
 	"github.com/silenceper/wechat/v2/pay/config"
 	"github.com/silenceper/wechat/v2/pay/notify"
 	"github.com/silenceper/wechat/v2/pay/order"
+	"github.com/silenceper/wechat/v2/pay/redPacket"
 	"github.com/silenceper/wechat/v2/pay/refund"
 )
 
@@ -30,4 +31,9 @@ func (pay *Pay) GetNotify() *notify.Notify {
 // GetRefund  退款
 func (pay *Pay) GetRefund() *refund.Refund {
 	return refund.NewRefund(pay.cfg)
+}
+
+// GetRedPacket  发送红包
+func (pay *Pay) GetRedPacket() *redPacket.RedPacket {
+	return redPacket.NewRedPacket(pay.cfg)
 }
