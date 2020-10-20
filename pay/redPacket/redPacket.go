@@ -32,6 +32,7 @@ type Params struct {
 	ClientIp    string
 	ActName     string
 	Remark      string
+	SceneId     string
 	RootCa      string //ca证书
 }
 
@@ -84,6 +85,7 @@ func (redPacket *RedPacket) RedPacket(p *Params) (rsp Response, err error) {
 	param["wishing"] = p.Wishing
 	param["client_ip"] = p.ClientIp
 	param["act_name"] = p.ActName
+	param["scene_id"] = p.SceneId
 	param["remark"] = p.Remark
 	//param["sign_type"] = util.SignTypeMD5
 
