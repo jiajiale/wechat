@@ -108,6 +108,7 @@ func (redPacket *RedPacket) RedPacket(p *Params) (rsp Response, err error) {
 		ClientIp:    p.ClientIp,
 		ActName:     p.ActName,
 		Remark:      p.Remark,
+		SceneId:     p.SceneId,
 	}
 	rawRet, err := util.PostXMLWithTLS(redPacketGateway, request, p.RootCa, redPacket.MchID)
 	if err != nil {
