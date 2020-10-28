@@ -53,12 +53,14 @@ type PlainData struct {
 	} `json:"watermark"`
 }
 
+type StepInfoList struct {
+	Timestamp int64 `json:"timestamp"`
+	Step      int   `json:"step"`
+}
+
 // StepData 用户运动步数
 type StepData struct {
-	StepInfoList struct {
-		Timestamp int64 `json:"timestamp"`
-		Step      int   `json:"step"`
-	} `json:"stepInfoList"`
+	StepInfoList []StepInfoList `json:"stepInfoList"`
 }
 
 // pkcs7Unpad returns slice of the original data without padding
