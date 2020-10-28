@@ -53,6 +53,14 @@ type PlainData struct {
 	} `json:"watermark"`
 }
 
+// StepData 用户运动步数
+type StepData struct {
+	StepInfoList struct {
+		Timestamp int64 `json:"timestamp"`
+		Step      int   `json:"step"`
+	} `json:"stepInfoList"`
+}
+
 // pkcs7Unpad returns slice of the original data without padding
 func pkcs7Unpad(data []byte, blockSize int) ([]byte, error) {
 	if blockSize <= 0 {
@@ -116,4 +124,18 @@ func (encryptor *Encryptor) Decrypt(sessionKey, encryptedData, iv string) (*Plai
 		return nil, ErrAppIDNotMatch
 	}
 	return &plainData, nil
+}
+
+// Decrypt 解密数据
+func (encryptor *Encryptor) DecryptStep(sessionKey, encryptedData, iv string) (*StepData, error) {
+	cipherText, err := getCipherText(sessionKey, encryptedData, iv)
+	if err != nil {
+		return nil, err
+	}
+	var stepData StepData
+	err = json.Unmarshal(cipherText, &stepData)
+	if err != nil {
+		return nil, err
+	}
+	return &stepData, nil
 }
