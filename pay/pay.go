@@ -2,6 +2,7 @@ package pay
 
 import (
 	"github.com/jiajiale/wechat/pay/config"
+	"github.com/jiajiale/wechat/pay/miniRedPacket"
 	"github.com/jiajiale/wechat/pay/notify"
 	"github.com/jiajiale/wechat/pay/order"
 	"github.com/jiajiale/wechat/pay/redPacket"
@@ -36,4 +37,9 @@ func (pay *Pay) GetRefund() *refund.Refund {
 // GetRedPacket  发送红包
 func (pay *Pay) GetRedPacket() *redPacket.RedPacket {
 	return redPacket.NewRedPacket(pay.cfg)
+}
+
+// GetMiniRedPacket  发送红包
+func (pay *Pay) GetMiniRedPacket() *miniRedPacket.MiniRedPacket {
+	return miniRedPacket.NewMiniRedPacket(pay.cfg)
 }
