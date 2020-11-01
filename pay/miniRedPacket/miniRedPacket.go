@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"github.com/jiajiale/wechat/pay/config"
 	"github.com/jiajiale/wechat/util"
+	"strconv"
+	"time"
 )
 
 var miniRedPacketGateway = "https://api.mch.weixin.qq.com/mmpaymkttransfers/sendminiprogramhb"
@@ -127,4 +129,21 @@ func (miniRedPacket *MiniRedPacket) RedPacket(p *Params) (rsp Response, err erro
 	}
 	err = fmt.Errorf("[msg : xmlUnmarshalError] [rawReturn : %s] [sign : %s]", string(rawRet), sign)
 	return
+}
+
+func (miniRedPacket *MiniRedPacket) GetJsRedPacket(pkg string) (map[string]string, error) {
+	var err error
+	nonceStr := util.RandomStr(32)
+	timeStamp := time.Now().Unix()
+	param := make(map[string]string)
+	param["appId"] = miniRedPacket.AppID
+	param["nonceStr"] = nonceStr
+	param["timeStamp"] = strconv.Itoa(int(timeStamp))
+	param["package"] = pkg
+	param["paySign"], err = util.ParamSign(param, miniRedPacket.Key)
+	if err != nil {
+		return nil, err
+	}
+	param["signType"] = util.SignTypeMD5
+	return param, nil
 }
