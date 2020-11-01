@@ -7,6 +7,7 @@ import (
 	"github.com/jiajiale/wechat/pay/order"
 	"github.com/jiajiale/wechat/pay/redPacket"
 	"github.com/jiajiale/wechat/pay/refund"
+	"github.com/jiajiale/wechat/pay/transfer"
 )
 
 //Pay 微信支付相关API
@@ -32,6 +33,11 @@ func (pay *Pay) GetNotify() *notify.Notify {
 // GetRefund  退款
 func (pay *Pay) GetRefund() *refund.Refund {
 	return refund.NewRefund(pay.cfg)
+}
+
+// GetTransfer  企业付款
+func (pay *Pay) GetTransfer() *transfer.Transfer {
+	return transfer.NewTransfer(pay.cfg)
 }
 
 // GetRedPacket  发送红包
